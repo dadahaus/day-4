@@ -2,14 +2,18 @@
      display: grid;
      place-content: center;
      background: black;
-
+    h3 {
+        font-size: 1rem;
+    }
      .card {
          aspect-ratio: 1 / 1.6;
-         border: 0.5vmin solid var(--primary);
+        //  border: 0.5vmin solid var(--primary);
          cursor: pointer;
          position: relative;
          width: 56vmin;
          overflow: hidden;
+
+
 
          &:hover {
              &>.card-content {
@@ -56,12 +60,16 @@
              transition: background-position 350ms ease;
              width: 100%;
              z-index: 1000;
+             &>* {
+                 padding: 1rem;
+             }
 
              &:hover {
                  background-position: -10% 0%;
              }
 
              .card-subtitle .card-subtitle-word {
+                 font-size: 3rem;
                  color: pink;
                  display: inline-block;
                  margin: 0vmin 0.3vmin;

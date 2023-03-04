@@ -5,6 +5,10 @@ const app = new App({
 })
 const subtitle = document.getElementsByClassName("card-subtitle")[0]
 
+const createSubtitle = text => text.split("").map(addWord)
+
+const addWord = (text, index) => subtitle.appendChild(createWord(text, index))
+
 const createWord = (text, index) => {
   const word = document.createElement("span")
   word.innerHTML = `${text}`
@@ -12,11 +16,6 @@ const createWord = (text, index) => {
   word.style.transitionDelay = `${index * 40}ms`
   return word
 }
-
-const addWord = (text, index) => subtitle.appendChild(createWord(text, index))
-
-const createSubtitle = text => text.split("").map(addWord)
-
 createSubtitle("whatevs man, this is me coding")
 
 
